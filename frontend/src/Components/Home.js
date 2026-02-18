@@ -198,7 +198,7 @@ useEffect(() => {
                       src={e.photo ? `http://localhost:9000/${e.photo.replace(/\\/g, "/")}` : ""}
                      
                       className="w-13 h-12 rounded-full object-cover"
-             alt="Photo"
+               alt={e.name}
                     /></td>
                     <td className="px-6 py-4 border border-gray-600">{e.name}</td>
                     <td className="px-6 py-4 border border-gray-600">{e.email}</td>
@@ -220,13 +220,14 @@ useEffect(() => {
 // Sidebar item component
 const SidebarItem = ({ iconPath, label }) => (
   <li>
-    <a href="#" className="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded">
+    <button type="button" className="flex items-center space-x-3 p-2 hover:bg-gray-700 rounded w-full text-left">
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
         <path d={iconPath} />
       </svg>
       <span>{label}</span>
-    </a>
+    </button>
   </li>
 );
+
 
 export default Home;
