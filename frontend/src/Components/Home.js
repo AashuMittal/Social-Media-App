@@ -48,7 +48,7 @@ const Home = () => {
 
   const userId = localStorage.getItem("userId");
   const handleclick = (e) => {
-    if (e.id == userId) {
+    if (e.id === userId) {
       navigate('/social')
     }
     else {
@@ -198,7 +198,7 @@ useEffect(() => {
                       src={e.photo ? `http://localhost:9000/${e.photo.replace(/\\/g, "/")}` : ""}
                      
                       className="w-13 h-12 rounded-full object-cover"
-
+             alt="Photo"
                     /></td>
                     <td className="px-6 py-4 border border-gray-600">{e.name}</td>
                     <td className="px-6 py-4 border border-gray-600">{e.email}</td>
