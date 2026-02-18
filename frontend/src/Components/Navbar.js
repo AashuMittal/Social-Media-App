@@ -35,7 +35,7 @@ const Navbar = ({ setSidebarOpen, isSidebarOpen }) => {
             src={photoPath ? `http://localhost:9000/${photoPath.replace(/\\/g, "/")}` : ""}
             
               className="w-12 h-12 rounded-full object-cover"
-           
+           alt='Profile'
             />
           )}
         
