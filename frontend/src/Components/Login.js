@@ -9,7 +9,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
-  const fetchApi = async () => {
+   useEffect(()=>{
+ const fetchApi = async () => {
     try {
       const res = await fetch("http://localhost:9000/login");
       const result = await res.json();
@@ -18,6 +19,10 @@ const Login = () => {
       console.error("Error fetching data:", error);
     }
   };
+  fetchApi()
+  })
+
+  console.log(data);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
