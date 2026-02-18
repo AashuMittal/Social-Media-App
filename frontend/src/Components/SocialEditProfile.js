@@ -73,7 +73,7 @@ const SocialEditProfile = () => {
             src={photoPath ? `http://localhost:9000/${photoPath.replace(/\\/g, "/")}` : ""}
             
               className=" rounded-full object-cover"
-           
+           alt='Profile'
             />
           </div>
         </div>
