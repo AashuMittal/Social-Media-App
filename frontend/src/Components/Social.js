@@ -265,7 +265,7 @@ const Social = () => {
               <p className="text-gray-500 text-center">No users available.</p>
             ) : (
               data.map((user, index) =>
-                user.id != userid && (
+               Number(user.id) !== Number(userid) && (
                   <div key={index} className="flex items-center space-x-4 mb-4">
                     {user.photo ? (
                       <img
